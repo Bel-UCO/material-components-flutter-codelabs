@@ -55,12 +55,23 @@ ThemeData _buildShrineTheme() {
       error: kShrineErrorRed,
     ),
     // TODO: Add the text themes (103)
-    // TODO: Add the text themes (103)
     textTheme: _buildShrineTextTheme(base.textTheme),
     textSelectionTheme: const TextSelectionThemeData(
       selectionColor: kShrinePink100,
     ),
     // TODO: Decorate the inputs (103)
+    inputDecorationTheme: const InputDecorationTheme(
+      border: OutlineInputBorder(),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          width: 2.0,
+          color: kShrineBrown900,
+        ),
+      ),
+      floatingLabelStyle: TextStyle(
+        color: kShrineBrown900,
+      ),
+    ),
   );
 }
 

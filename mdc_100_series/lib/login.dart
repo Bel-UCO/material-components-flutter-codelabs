@@ -50,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
             TextField(
               controller: _usernameController,
               decoration: const InputDecoration(
-                filled: true,
+                // filled: true,
                 labelText: 'Username',
               ),
             ),
@@ -60,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
             TextField(
               controller: _passwordController,
               decoration: const InputDecoration(
-                filled: true,
+                // filled: true,
                 labelText: 'Password',
               ),
               obscureText: true,
@@ -74,10 +74,12 @@ class _LoginPageState extends State<LoginPage> {
                 TextButton(
                   child: const Text('CANCEL'),
                   onPressed: () {
-                    // TODO: Clear the text fields (101)
                     _usernameController.clear();
                     _passwordController.clear();
                   },
+                  style: TextButton.styleFrom(
+                    foregroundColor: Theme.of(context).colorScheme.secondary,
+                  ),
                 ),
                 // TODO: Add an elevation to NEXT (103)
                 // TODO: Add a beveled rectangular border to NEXT (103)

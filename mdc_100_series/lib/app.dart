@@ -65,12 +65,14 @@ ThemeData _buildShrineTheme() {
       secondary: kShrineBrown900,
       error: kShrineErrorRed,
     ),
-    // TODO: Add the text themes (103)
     textTheme: _buildShrineTextTheme(base.textTheme),
     textSelectionTheme: const TextSelectionThemeData(
       selectionColor: kShrinePink100,
     ),
-    // TODO: Decorate the inputs (103)
+    appBarTheme: const AppBarTheme(
+      foregroundColor: kShrineBrown900,
+      backgroundColor: kShrinePink100,
+    ),
     inputDecorationTheme: const InputDecorationTheme(
       border: CutCornersBorder(),
       focusedBorder: CutCornersBorder(
@@ -78,14 +80,13 @@ ThemeData _buildShrineTheme() {
           width: 2.0,
           color: kShrineBrown900,
         ),
-      ), 
+      ),
       floatingLabelStyle: TextStyle(
         color: kShrineBrown900,
       ),
     ),
   );
 }
-
 // TODO: Build a Shrine Text Theme (103)
 TextTheme _buildShrineTextTheme(TextTheme base) {
   return base
